@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 23-Out-2016 às 16:34
--- Versão do servidor: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Tempo de geração: 11/11/2016 às 13:54
+-- Versão do servidor: 10.1.9-MariaDB
+-- Versão do PHP: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ben10rundb`
+-- Banco de dados: `ben10rundb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `aliens`
+-- Estrutura para tabela `aliens`
 --
 
 CREATE TABLE `aliens` (
@@ -35,7 +35,7 @@ CREATE TABLE `aliens` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `aliens`
+-- Fazendo dump de dados para tabela `aliens`
 --
 
 INSERT INTO `aliens` (`ID`, `Nome`, `MaxAtaque`, `MaxDefesa`, `MaxHP`) VALUES
@@ -50,7 +50,7 @@ INSERT INTO `aliens` (`ID`, `Nome`, `MaxAtaque`, `MaxDefesa`, `MaxHP`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `caixadecapsulas`
+-- Estrutura para tabela `caixadecapsulas`
 --
 
 CREATE TABLE `caixadecapsulas` (
@@ -58,14 +58,14 @@ CREATE TABLE `caixadecapsulas` (
   `AlienID` int(11) NOT NULL,
   `Ataque` int(11) NOT NULL,
   `Defesa` int(11) NOT NULL,
-  `Pontos de vida` int(11) NOT NULL
+  `Pontos_de_vida` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `caixadecapsulas`
+-- Fazendo dump de dados para tabela `caixadecapsulas`
 --
 
-INSERT INTO `caixadecapsulas` (`Nickname`, `AlienID`, `Ataque`, `Defesa`, `Pontos de vida`) VALUES
+INSERT INTO `caixadecapsulas` (`Nickname`, `AlienID`, `Ataque`, `Defesa`, `Pontos_de_vida`) VALUES
 ('nathanvmag', 2, 30, 80, 200),
 ('jupotengy', 5, 20, 130, 120),
 ('ronaldd11', 4, 10, 200, 200),
@@ -75,7 +75,7 @@ INSERT INTO `caixadecapsulas` (`Nickname`, `AlienID`, `Ataque`, `Defesa`, `Ponto
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `itens`
+-- Estrutura para tabela `itens`
 --
 
 CREATE TABLE `itens` (
@@ -84,7 +84,7 @@ CREATE TABLE `itens` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `itens`
+-- Fazendo dump de dados para tabela `itens`
 --
 
 INSERT INTO `itens` (`ID`, `Nome`) VALUES
@@ -94,7 +94,7 @@ INSERT INTO `itens` (`ID`, `Nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `mochila`
+-- Estrutura para tabela `mochila`
 --
 
 CREATE TABLE `mochila` (
@@ -104,7 +104,7 @@ CREATE TABLE `mochila` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `mochila`
+-- Fazendo dump de dados para tabela `mochila`
 --
 
 INSERT INTO `mochila` (`Nickname`, `ItemID`, `Quantidade`) VALUES
@@ -114,7 +114,7 @@ INSERT INTO `mochila` (`Nickname`, `ItemID`, `Quantidade`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `player`
+-- Estrutura para tabela `player`
 --
 
 CREATE TABLE `player` (
@@ -125,7 +125,7 @@ CREATE TABLE `player` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `player`
+-- Fazendo dump de dados para tabela `player`
 --
 
 INSERT INTO `player` (`Nickname`, `Email`, `Senha`, `XP`) VALUES
@@ -134,38 +134,38 @@ INSERT INTO `player` (`Nickname`, `Email`, `Senha`, `XP`) VALUES
 ('ronaldd11', 'ronaldalbert1609@gmail.com', 'ronaldd+', 30);
 
 --
--- Indexes for dumped tables
+-- Índices de tabelas apagadas
 --
 
 --
--- Indexes for table `aliens`
+-- Índices de tabela `aliens`
 --
 ALTER TABLE `aliens`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `itens`
+-- Índices de tabela `itens`
 --
 ALTER TABLE `itens`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `player`
+-- Índices de tabela `player`
 --
 ALTER TABLE `player`
   ADD PRIMARY KEY (`Nickname`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas apagadas
 --
 
 --
--- AUTO_INCREMENT for table `aliens`
+-- AUTO_INCREMENT de tabela `aliens`
 --
 ALTER TABLE `aliens`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT for table `itens`
+-- AUTO_INCREMENT de tabela `itens`
 --
 ALTER TABLE `itens`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
